@@ -1,0 +1,19 @@
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+laptop_brand = input("Enter your favorite laptop brand: ")
+
+print(f"Hi, {name}! You are {age} years old, and your favorite laptop brand is {laptop_brand}.")
+
+item = "Huawei Laptop"
+count = 1
+
+sentence = "Looking for powerful and intelligent laptop? I recommend you the {} the number one budget friendly laptop that is good for IT students so what are you waiting for get your self a {} Huawei Laptop.".format(item, count)
+print(sentence)
+
+Country = "Japan"
+Temperature = 18
+
+print("The temperature in %s is %d degrees Celsius." % (Country, Temperature))
+
+
