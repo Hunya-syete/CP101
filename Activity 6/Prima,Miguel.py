@@ -10,6 +10,8 @@ item = "Dragon balls"
 cost = 182
 
 Miguel = "I bouth {} and it cost me {}".format (item,cost)
+print(Miguel)
+
 
 city = "dipolog city"
 temperature = 82.4
