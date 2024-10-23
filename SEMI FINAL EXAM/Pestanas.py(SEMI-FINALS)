@@ -1,0 +1,53 @@
+def display_records(records):
+    """Print the current records."""
+    print("Current records:", records)
+
+def main():
+    """Main function to manage records."""
+    records = {}
+
+    while True:
+        print("Choose an option:")
+        print("a. Add Data")
+        print("b. Delete Data")
+        print("c. End")
+
+        choice = input("Enter your choice: ").strip().lower()
+
+        if choice == 'a':
+            key = input("Enter Key: ")
+            value = input("Enter Value: ")
+
+            
+            if not key or not value:
+                print("Key and value cannot be empty.")
+                continue
+
+            records[key] = value
+            print(f"Record added: {key} -> {value}")
+            display_records(records)
+
+        elif choice == 'b':
+            key = input("Enter Key to delete: ")
+
+            
+            if not key:
+                print("Key cannot be empty.")
+                continue
+
+            if key in records:
+                del records[key]
+                print(f"Record deleted: {key}")
+            else:
+                print("Key not found.")
+            display_records(records)
+
+        elif choice == 'c':
+            print("THANK YOU")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
