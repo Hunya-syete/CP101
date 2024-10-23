@@ -1,0 +1,53 @@
+class RecordKeepingApp:
+    def __init__(self):
+
+        self.records = {}
+
+    def display_menu(self):
+        print("\n--- Record Keeping App ---")
+        print("1. Add Data")
+        print("2. Delete Data")
+        print("3. End")
+
+    def add_data(self):
+        key = input("Enter Key (Lastname): ")
+        value = input(f"Enter Value for {key}: ")
+        self.records[key] = value
+        print("\nData added successfully.")
+        self.display_records()
+
+    def delete_data(self):
+        key = input("Enter Key to delete: ")
+        if key in self.records:
+            del self.records[key]
+            print(f"\nData with key '{key}' has been deleted.")
+        else:
+            print(f"\nKey '{key}' not found.")
+        self.display_records()
+
+    def display_records(self):
+        print("\nCurrent records:")
+        if self.records:
+            for key, value in self.records.items():
+                print(f"{key}: {value}")
+        else:
+            print("No records available.")
+
+    def run(self):
+        while True:
+            self.display_menu()
+            choice = input("Choose an option (1/2/3): ")
+
+            if choice == '1':
+                self.add_data()
+            elif choice == '2':
+                self.delete_data()
+            elif choice == '3':
+                print("\nTHANK YOU")
+                break
+            else:
+                print("\nInvalid choice. Please try again.")
+
+
+app = RecordKeepingApp()
+app.run()
