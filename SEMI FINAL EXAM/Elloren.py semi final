@@ -1,0 +1,34 @@
+def main():
+    records = {}
+
+    while True:
+        print("\nOptions:")
+        print("1. Add Data")
+        print("2. Delete Data")
+        print("3. End")
+        
+        choice = input("Choose an option (1-3): ")
+
+        if choice == '1':
+            key = input("Enter Key (Lastname): ")
+            value = input("Enter Value: ")
+            records[key] = value
+            print(f"Added: {key} -> {value}")
+
+        elif choice == '2':
+            key = input("Enter Key to delete (Lastname): ")
+            if key in records:
+                del records[key]
+                print(f"Deleted: {key}")
+            else:
+                print("Key not found.")
+
+        elif choice == '3':
+            print("THANK YOU")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
