@@ -1,0 +1,4 @@
+Legasa= float(input("enter rate:"))
+Legasa= float (input("enter hours"))
+
+print("gross pay:",)
